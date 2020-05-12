@@ -8,17 +8,24 @@ import { HeaderComponent } from './components/templates/header/header.component'
 
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { FooterComponent } from './components/templates/footer/footer.component';
+import { NavComponent } from './components/templates/nav/nav.component';
+
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatListModule, MatList} from "@angular/material/list"
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
     BrowserAnimationsModule
   ],
   providers: [],
