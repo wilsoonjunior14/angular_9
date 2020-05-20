@@ -11,19 +11,25 @@ import { FooterComponent } from './components/templates/footer/footer.component'
 import { NavComponent } from './components/templates/nav/nav.component';
 
 import {MatSidenavModule} from "@angular/material/sidenav";
-import {MatListModule, MatList} from "@angular/material/list"
+import {MatCardModule} from "@angular/material/card";
+import {MatListModule, MatList} from "@angular/material/list";
+import { HomeComponent } from './views/home/home.component';
+import { ProductCrudComponent } from './views/product-crud/product-crud.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    ProductCrudComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
+    MatCardModule,
     MatSidenavModule,
     MatListModule,
     BrowserAnimationsModule
