@@ -1,5 +1,32 @@
-<ul>
-    <li *ngFor="let product of products">
-        {{product.id}} - {{product.name}}
-    </li>
-</ul>
+<mat-card>
+    <mat-card-title>
+        <i class="material-icons left">storefront</i>Products
+    </mat-card-title>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.name}}</td>
+                <td>{{product.price | currency: 'BRL'}}</td>
+                <td>
+
+                    <button mat-raised-button routerLink="/products/update/{{product.id}}">
+                        <i class="material-icons">edit</i>
+                    </button>
+
+                    <button mat-raised-button (click)="delete(product)">
+                        <i class="material-icons">delete</i>
+                    </button>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</mat-card>
